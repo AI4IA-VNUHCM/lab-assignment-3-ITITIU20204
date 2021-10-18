@@ -15,6 +15,19 @@ ______________________________________
 int Ex4(int arr[], int n){
 	//Your codes here
 	
+  int count1,count2;
+  count1=0;
+  count2=0;
+  for (int i=0; i<n; i++) {
+
+    if (arr[i] <= arr[i-1])
+      count2 = count2 + 1;
+    if (arr[i] >= arr[i-1])
+      count1 = count1 + 1;
+  }
+  if (count1==0) return -1;
+  else{ if (count2==0) return 1;
+  else return 0;}
 }
 
 int main(int argc, char *argv[]) {
